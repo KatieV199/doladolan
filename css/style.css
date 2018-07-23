@@ -1,0 +1,310 @@
+
+/*
+Author: Katie Voorobeva
+Description: Dog Free Project
+[Table of contents]
+1. General
+2. Margins&Paddings
+3. Main 
+4. Clouds 
+5. Advantages 
+6. Progressbar 
+7. Slider 
+8. Catalog 
+*/
+
+/*******General*******/
+* {box-sizing: border-box;}
+body {
+	min-width: 320px;
+	margin: 0;
+	background-color: #fff;
+	font-family: 'Open Sans', sans-serif;
+}
+img {width: 100%;}
+h1 {font-size: 50px;font-weight: 600; font-family: 'Merriweather', serif;}
+h2 {
+	font-size: 35px;
+	font-weight: 600; 
+	font-family: 'Merriweather', serif;
+	line-height: 50px;
+}
+h3 {color: #fff;font-size: 20px;position: relative;}
+p {color: #8b8ca5;}
+label {margin-bottom: 0;}
+input {
+	width: 350px;
+	height: 60px;
+	border: none;
+	padding: 10px;
+	font-size: 14px;
+	border-radius: 5px 0 0 5px;
+	outline: none;
+}
+input::placeholder {color: #949494d6;;}
+a.link {padding-left: 25px;position: relative;}
+a.link::before {
+	position: absolute;
+	content: '\2014';
+	width: 20px;
+	top: 0px;
+	left: 0;
+}
+a.link:hover {text-decoration: none;color: #1ec5e0;}
+ul {list-style: none; padding: 0;}
+.uppercase {text-transform: uppercase;}
+.letter-mark {color:#1ec5e0;}
+.font-sm {font-size: 13px;}
+.btn {
+	height: 60px;
+	vertical-align: top;
+	border-radius: 0 5px 5px 0;
+	background: #1ec5e0;
+	color: #fff;
+	width: 150px;
+	font-size: 14px;
+}
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+::-webkit-scrollbar {width: 1px;height: 1px;}
+::-webkit-scrollbar-button {width: 1px;height: 1px;}
+.horizontal-scroll {
+	overflow: hidden;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch
+}
+
+/*******Margins & Paddings*******/
+.m-null {margin: 0;}
+.mt-lg {margin-top: 60px;}
+.mt-md {margin-top: 40px;}
+.mt-sm{margin-top: 20px;}
+.ml-lg {margin-left: 40%;}
+.mt-xlg {margin-top: 150px;}
+
+.mb-lg {margin-bottom: 60px;}
+.mb-md {margin-bottom: 40px;}
+.mb-sm{margin-bottom: 20px;}
+
+.p-null {padding: 0;}
+.pt-lg{padding-top: 60px;}
+.pt-md {padding-top: 40px;}
+.pt-sm {padding-top: 20px;}
+.pb-sm {padding-bottom: 20px;}
+.pl-sm {padding-left: 15px;}
+.p-l-r-sm {padding-left: 15px;padding-right: 15px;}
+
+/*******Main*******/
+.right-side {height: 850px;overflow: hidden;}
+.left-side_wrapper {
+	position: absolute;
+	left: 30%;
+	top: 100px;
+	right: 5%;
+}
+@media(min-width: 320px) {
+	.left-side_wrapper {position: unset;}
+}
+@media(min-width: 1200px) {
+	.left-side_wrapper {position: absolute;}
+}
+.left-side_wrapper p{line-height: 30px;margin-top: 140px;}
+.logo span {font-size: 14px;font-weight: 300;}
+.left-side form {
+	position: absolute;
+	right: -177px;
+	z-index: 99999;
+	font-size: 0;
+	box-shadow: 0px 5px 20px 0px rgba(74, 73, 73, 0.35);
+}
+menu {
+	z-index: 999;
+	position: relative;
+	text-align: right;
+}
+menu ul li {display: inline-block; padding: 20px 30px;}
+menu ul li a {color: #fff; font-size: 14px;font-weight: 100;}
+menu ul li a:hover {color: #fb7f68;text-decoration: none;transition:2s;}
+
+
+/*******Slider*******/
+.wrap {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	background: #120103;
+	color: white;
+	text-align: center;
+	height: 700px;
+}
+.slide {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 100%;
+	z-index: 10;
+	padding: 8em 1em 0;
+	background-color: #120103;
+	background-position: 50% 50%;
+	background-size: cover;
+	transition: left 0s 0.75s;
+}
+.slide-one {
+	background-image: url("../images/austin-neill-308610-unsplash.jpg");
+}
+.slide-two {
+	background-image: url("../images/ian-dooley-407840-unsplash.jpg");
+}
+.slide-three {
+	background-image: url("../images/mahir-uysal-303105-unsplash.jpg");
+}
+.slide-four {
+	background-image: url(../images/austin-ban-3995-unsplash.jpg);
+}
+.slide-five {
+	background-image: url(../images/ian-dooley-337254-unsplash.jpg);
+}
+[id^="slide"]:checked + .slide {
+	left: 0;
+	z-index: 100;
+	transition: left 0.65s ease-out;
+}
+.footer-slider {
+	position: absolute;
+	background: #fff;
+	z-index: 9999;
+	color: #000;
+	bottom: -70px;
+	background: transparent;
+	padding-left: 10px;
+	width: 750px;
+}
+.slide-min {
+	width: 250px;
+	height: 150px;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: 50% 50%;
+	margin: 0 10px;
+}
+.slide-1 {
+	background-image: url(../images/austin-neill-308610-unsplash.jpg);
+}
+.slide-2 {
+	background-image: url(../images/ian-dooley-407840-unsplash.jpg);
+}
+.slide-3 {
+	background-image: url(../images/mahir-uysal-303105-unsplash.jpg);
+}
+.slide-4 {
+	background-image: url(../images/austin-ban-3995-unsplash.jpg);
+}
+.slide-5 {
+	background-image: url(../images/ian-dooley-337254-unsplash.jpg);
+}
+
+/*******Experience*******/
+.img {
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: 50% 50%;
+	height: 350px;
+	position: relative;
+}
+.img1 {
+	background-image: url(../images/item-img1.jpg);
+}
+.img2 {
+	background-image: url(../images/item-img2.jpg);
+}
+.img3 {
+	background-image: url(../images/item-img3.jpg);
+}
+.img4 {
+	background-image: url(../images/item-img4.jpg);
+}
+.item {height: 350px;}
+.item .img {position: relative;}
+.item .img::before{
+	content: '';
+	position: absolute;
+	background-color: #000;
+	opacity: 0.5;
+	width: 100%;
+	height: 100%;
+}
+.item-block {padding: 30px 20px;}
+.item-block a {margin-top: 230px;display: block;}
+
+/*******Gallery*******/
+.gallery p {width: 345px;line-height: 30px;display: inline-block;}
+.box {width: 250px;height: 250px;position: relative;margin: 0 10px 10px 10px;}
+.box:first-child {left: -400px;}
+.box:nth-child(2) {left: -400px;}
+.box:nth-child(3){top: -450px;left: -100px;}
+.box:nth-child(4){top: -450px;left: -100px;}
+.gallery .images {max-height: 600px;}
+
+
+
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border-radius: 0;
+}
+
+label[for=favcity] {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+}
+
+label[for=favcity]::after {
+	content: '';
+	position: absolute;
+	background-image: url(../images/arrow.png);
+	right: -10px;
+	top: 30px;
+	width: 40px;
+	height: 40px;
+	display: block;
+	pointer-events: none;
+	background-repeat: no-repeat;
+}
+
+label[for=favcity] select {
+	border: none;
+	background: white;
+	width: 100%;
+	font-family: monospace;
+	cursor: pointer;
+	width: 250px;
+	font-weight: 600;
+	font-family: 'Merriweather', serif;
+}
+.font-big{font-size: 40px;}
+label[for=favcity] select option {font-size: 10px;}
+label[for=favcity] select::-ms-expand {
+	display: none;
+}
+
+label[for=favcity] :-moz-any(select) {
+	width: 110%;
+}
+
+label[for=favcity].ie9 select {
+	width: 110%;
+}
+
+label[for=favcity] select:focus {
+	outline: none;
+}
+
+
+
+
